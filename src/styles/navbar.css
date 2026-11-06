@@ -1,0 +1,72 @@
+.navbar-header{
+    background: rgb(250, 141, 223);
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+#title{
+    margin-left: 10px;
+    color: rgb(247, 246, 246);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Playwrite TZ Guides", cursive;
+     
+   
+}
+#brand-name{
+    color: rgb(151, 6, 151);
+}
+.navbar{
+    margin-left:50px;
+    color: white;
+   
+    
+}
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #61095d;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+#navImage {
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    transform: translateY(-12px);
+    object-fit: contain;
+}
+
+#navImage2 {
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    transform: translateY(14px);
+    object-fit: contain;
+}

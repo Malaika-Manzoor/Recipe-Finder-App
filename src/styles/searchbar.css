@@ -1,0 +1,40 @@
+
+
+.search-wrapper {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+#logoSearch {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    
+}
+
+#search {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+   
+}
+
+#search:focus {
+    border-color: #e157f3;
+    box-shadow: 0 0 5px rgba(225, 87, 243, 0.3);
+}
+
+#search::placeholder {
+    color: #999;
+    text-align: center;
+}
