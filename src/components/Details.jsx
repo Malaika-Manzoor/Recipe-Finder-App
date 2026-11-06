@@ -26,6 +26,7 @@ function Details() {
       })
       .catch((error)=>{
         setError(`Error:${error}`)
+        setLoading(false)
       })
     
     
@@ -34,7 +35,7 @@ function Details() {
   const ingredients = []
   let filterIng
   if(recipes){
-      for (let i = 1; i < 20; i++) {
+      for (let i = 1; i <=20; i++) {
         ingredients.push(recipes[`strIngredient${i}`])
         
       }
