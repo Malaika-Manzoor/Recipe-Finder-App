@@ -22,9 +22,12 @@ function Home({search}) {
     const img8 = "/images/s5.png"
 
     useEffect(()=>{
+        const controller = new AbortController();
         setLoading(true)
         setError("")
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`,{
+            signal:controller.signal
+        })
         .then((response)=>response.json())
         .then((data)=>{
 
@@ -39,9 +42,16 @@ function Home({search}) {
             setLoading(false)
         })
         .catch((error)=>{
+            if (error.name !== "AbortError") {
             setError(`Error fetching recipes: ${error.message}`)
+            setRecipes([])
             setLoading(false)
+            }
         })
+        return ()=>{
+            controller.abort()
+        }
+        
     },[search])
 
     if(loading){
