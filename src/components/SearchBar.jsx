@@ -10,7 +10,7 @@ function SearchBar({setSearch}) {
       inputRef.current.focus()
     }, [])
 
-  // i applied councept of debounce as everytime i am searching it takes times in loading in every alphabet
+  // i applied concept of debounce as everytime i am searching it takes times in loading in every alphabet
     const debounce = (func,delay)=>{
       let timer;
         return function(...args){
